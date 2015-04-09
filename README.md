@@ -1,5 +1,8 @@
 ## Overview 
-These are my personal dotfiles
+These are my personal dotfiles.
+
+You are welcome to take a look,
+and make any suggestion for improvements !
 
 ## Dependencies
 - Emacs 24.4
