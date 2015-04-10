@@ -19,6 +19,9 @@
                                             git-enable-github-support t
                                             git-gutter-use-fringe t )
 
+                                       ;; private layers
+                                       gtags
+
                                        ;; UI
                                        colors
 
