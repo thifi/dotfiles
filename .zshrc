@@ -23,7 +23,7 @@ ZSH_THEME="robbyrussell"
 
 HIST_STAMPS="dd/mm/yyyy"
 
-plugins=(git zsh-syntax-highlighting sudo fasd)
+plugins=(lein git zsh-syntax-highlighting sudo fasd geeknote)
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/itayg/scripts/"
 source $ZSH/oh-my-zsh.sh
