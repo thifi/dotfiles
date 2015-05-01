@@ -11,6 +11,7 @@
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers '(
+                                       syntax-checking
                                        (auto-completion :variables
                                                         auto-completion-enable-company-help-tooltip t )
 
@@ -19,7 +20,6 @@
                                             git-enable-github-support t
                                             git-gutter-use-fringe t )
 
-                                       ;; private layers
                                        gtags
 
                                        ;; UI
@@ -31,11 +31,14 @@
                                        ansible
                                        python
                                        c-c++
+                                       clojure
                                        markdown
                                        dockerfile
 
                                        slime
-                                       org-repo-todo
+                                       org
+                                       evernote
+                                       eyebrowse
                                        )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
