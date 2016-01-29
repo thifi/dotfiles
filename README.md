@@ -1,11 +1,11 @@
-## Overview 
+## Overview
 These are my personal dotfiles.
 
 You are welcome to take a look,
 and make any suggestion for improvements !
 
 ## Dependencies
-- [Emacs](https://www.gnu.org/software/emacs/) 24.4
+- [Emacs](https://www.gnu.org/software/emacs/) 24.5
 - [Zsh](http://www.zsh.org/)
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [spacemacs](https://github.com/syl20bnr/spacemacs)
