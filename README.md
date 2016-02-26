@@ -11,6 +11,7 @@ and make any suggestion for improvements !
 - [spacemacs](https://github.com/syl20bnr/spacemacs)
 - [GNU Global](https://www.gnu.org/software/global/) (> 6.2.4) -- must be compiled on Ubuntu/Debian
 - [global-pygments-plugin](https://github.com/yoshizow/global-pygments-plugin/) (for global python support)
+- [jumpapp](https://github.com/mkropat/jumpapp)
 
 ## Install
     git clone --recursive http://github.com/syl20bnr/spacemacs -b develop ~/.emacs.d
