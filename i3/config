@@ -10,11 +10,15 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# launch Emacs
+# bindsym Mod4+e exec ~/scripts/emacs-launcher
+# bindsym Mod4+Shift+e exec ~/scripts/server-launcher
+
+# Screen Shot
+bindsym $mod+Shift+s exec scrot -u -q 100
+
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-bindsym $mod+x exec synapse
 
 # change focus
 bindsym $mod+j focus down
@@ -107,10 +111,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -147,6 +151,7 @@ bar {
 
 # default workspaces
 assign [class="Spotify"] $workspace10
+for_window [class="Spotify"] move to workspace $workspace10
 assign [class="Clementine"] $workspace10
 assign [class="KeePass2"] $workspace9
 
@@ -154,11 +159,17 @@ assign [class="KeePass2"] $workspace9
 workspace $workspace1 output DFP1
 workspace $workspace2 output DFP1
 workspace $workspace3 output DFP1
+workspace $workspace4 output DFP1
+workspace $workspace5 output DFP1
+workspace $workspace6 output DFP1
 
+workspace $workspace7 output DFP6
+workspace $workspace8 output DFP6
 workspace $workspace9 output DFP6
 workspace $workspace10 output DFP6
 
 # startup
 exec compton -f -D 4
-exec clementine
+# exec clementine
+exec spotify
 exec keepass2
