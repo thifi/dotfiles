@@ -10,7 +10,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
-# launch Emacs
+# launch Emacs -- Moved to MATE's Shortcuts
 # bindsym Mod4+e exec ~/scripts/emacs-launcher
 # bindsym Mod4+Shift+e exec ~/scripts/server-launcher
 
