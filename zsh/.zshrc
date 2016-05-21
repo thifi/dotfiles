@@ -1,11 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 HIST_STAMPS="dd/mm/yyyy"
-plugins=(lein git zsh-256color history-substring-search zsh-syntax-highlighting sudo fasd)
-
-# bind P and N for EMACS mode
-bindkey -M emacs '^P' history-substring-search-up
-bindkey -M emacs '^N' history-substring-search-down
+plugins=(git zsh-256color zsh-syntax-highlighting sudo fasd)
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
