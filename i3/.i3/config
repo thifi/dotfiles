@@ -69,6 +69,9 @@ set $workspace8 "8 "
 set $workspace9 "9 "
 set $workspace10 "10 "
 
+set $primary-output DisplayPort-0
+set $secondary-output DVI-0
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
@@ -101,7 +104,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Screen Config
-exec.always xrandr --output DFP6 --mode 1920x1080 --pos 2560x0 --rotate left --output DFP7 --off --output DFP4 --off --output DFP5 --off --output DFP2 --off --output DFP3 --off --output DFP1 --primary --mode 2560x1440 --pos 0x64 --rotate normal
+exec.always xrandr --output DisplayPort-0 --primary --mode 2560x1440 --pos 0x21 --rotate normal --output DVI-1 --off --output DVI-0 --mode 1920x1080 --pos 2560x0 --rotate left --output HDMI-0 --off
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -156,17 +159,17 @@ assign [class="Clementine"] $workspace10
 assign [class="KeePass2"] $workspace9
 
 # workspace screen settings
-workspace $workspace1 output DFP1
-workspace $workspace2 output DFP1
-workspace $workspace3 output DFP1
-workspace $workspace4 output DFP1
-workspace $workspace5 output DFP1
-workspace $workspace6 output DFP1
+workspace $workspace1 output $primary-output
+workspace $workspace2 output $primary-output
+workspace $workspace3 output $primary-output
+workspace $workspace4 output $primary-output
+workspace $workspace5 output $primary-output
+workspace $workspace6 output $primary-output
 
-workspace $workspace7 output DFP6
-workspace $workspace8 output DFP6
-workspace $workspace9 output DFP6
-workspace $workspace10 output DFP6
+workspace $workspace7 output $secondary-output
+workspace $workspace8 output $secondary-output
+workspace $workspace9 output $secondary-output
+workspace $workspace10 output $secondary-output
 
 # startup
 exec compton -f -D 4
