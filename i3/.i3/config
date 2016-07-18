@@ -14,6 +14,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # bindsym Mod4+e exec ~/scripts/emacs-launcher
 # bindsym Mod4+Shift+e exec ~/scripts/server-launcher
 
+# Pomello
+bindsym Mod4+p exec Pomello
+
 # Screen Shot
 bindsym $mod+Shift+s exec scrot -u -q 100
 
@@ -152,11 +155,15 @@ bar {
         status_command i3blocks
 }
 
+# Pomello always floats
+for_window [class="Pomello"] floating enable
+
 # default workspaces
 assign [class="Spotify"] $workspace10
 for_window [class="Spotify"] move to workspace $workspace10
 assign [class="Clementine"] $workspace10
 assign [class="KeePass2"] $workspace9
+assign [class="Pomello"] $workspace8
 
 # workspace screen settings
 workspace $workspace1 output $primary-output
@@ -176,3 +183,4 @@ exec compton -f -D 4
 # exec clementine
 exec spotify
 exec keepass2
+exec Pomello
