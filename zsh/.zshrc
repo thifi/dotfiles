@@ -1,7 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 HIST_STAMPS="dd/mm/yyyy"
-plugins=(git zsh-256color zsh-syntax-highlighting sudo fasd)
+plugins=(archlinux git zsh-256color zsh-syntax-highlighting sudo fasd)
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
