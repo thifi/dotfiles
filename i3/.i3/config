@@ -10,9 +10,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
-# launch Emacs -- Moved to MATE's Shortcuts
-# bindsym Mod4+e exec ~/scripts/emacs-launcher
-# bindsym Mod4+Shift+e exec ~/scripts/server-launcher
+# launch Emacs
+bindsym Mod4+e exec emacsclient -c
+bindsym Mod4+Shift+e exec emacs --daemon
 
 # Pomello
 bindsym Mod4+p exec Pomello
@@ -61,16 +61,16 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+c focus child
 
-set $workspace1 "1 "
-set $workspace2 "2 "
-set $workspace3 "3 "
-set $workspace4 "4 "
-set $workspace5 "5 "
-set $workspace6 "6 "
-set $workspace7 "7 "
-set $workspace8 "8 "
-set $workspace9 "9 "
-set $workspace10 "10 "
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10"
 
 set $primary-output DisplayPort-0
 set $secondary-output DVI-0
@@ -184,3 +184,4 @@ exec compton -f -D 4
 exec spotify
 exec keepass2
 exec Pomello
+exec emacs --daemon
