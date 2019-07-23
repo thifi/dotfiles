@@ -12,7 +12,6 @@ sudo apt-get install \
      i3blocks \
      scrot \
      compton \
-     gnome-do \
      vlc \
      xclip \
      xdotool

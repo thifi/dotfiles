@@ -24,10 +24,10 @@ bindsym $mod+Shift+s exec scrot -u -q 100
 bindsym $mod+Shift+q kill
 
 # change focus
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-bindsym $mod+h focus left
+bindsym $mod+j exec i3-navigate-emacs down
+bindsym $mod+k exec i3-navigate-emacs up
+bindsym $mod+l exec i3-navigate-emacs right
+bindsym $mod+h exec i3-navigate-emacs left
 
 # move focused window
 bindsym $mod+Shift+j move down
@@ -72,8 +72,8 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace10 "10"
 
-set $primary-output DisplayPort-0
-set $secondary-output DVI-0
+set $primary-output DP-1-1
+set $secondary-output eDP-1-1
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
@@ -110,7 +110,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Screen Config
-exec.always xrandr --output DisplayPort-0 --primary --mode 2560x1440 --pos 0x21 --rotate normal --output DVI-1 --off --output DVI-0 --mode 1920x1080 --pos 2560x0 --rotate left --output HDMI-0 --off
+exec.always xrandr --output eDP-1-1 --mode 1920x1080 --pos 0x424 --rotate normal --output DP-1-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -183,8 +183,10 @@ workspace $workspace10 output $secondary-output
 
 # startup
 exec compton -f -D 4
+exec mate-panel
+exec --no-startup-id nitrogen --restore
 # exec clementine
-exec spotify
-exec keepass2
-exec Pomello
-exec emacs --daemon
+# exec spotify
+# exec keepass2
+# exec Pomello
+# exec emacs --daemon
