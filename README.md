@@ -10,6 +10,7 @@ and make any suggestion for improvements !
 
 ### Shell
 - [Zsh](http://www.zsh.org/)
+- fish (oh-my-fish: fzf, fasd and robbyrussell-theme)
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [fasd](https://github.com/clvv/fasd)
 - [Terminator](https://wiki.archlinux.org/index.php/Terminator)
