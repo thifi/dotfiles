@@ -1,0 +1,4 @@
+package fasd
+package https://github.com/jethrokuan/fzf
+theme default
+theme robbyrussell

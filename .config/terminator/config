@@ -1,0 +1,20 @@
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+    icon_bell = False
+    cursor_color = "#aaaaaa"
+    font = Monaco 30
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    copy_on_selection = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
