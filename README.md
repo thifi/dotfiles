@@ -13,7 +13,12 @@ and make any suggestion for improvements !
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [fasd](https://github.com/clvv/fasd)
 - [Terminator](https://wiki.archlinux.org/index.php/Terminator)
+- Alacritty (rust) + alacritty-theme
 - [fzf](https://github.com/junegunn/fzf)
+- exa (rust)
+- bat (rust)
+- delta (rust)
+- Nix
 
 ### Emacs
 - [Emacs](https://www.gnu.org/software/emacs/) 24.5
