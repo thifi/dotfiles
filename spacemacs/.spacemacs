@@ -492,6 +492,8 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (setq lsp-enable-on-type-formatting nil)
+  (define-key evil-normal-state-map ":" 'evil-goto-mark)
+  (define-key evil-normal-state-map "`" 'evil-ex)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
