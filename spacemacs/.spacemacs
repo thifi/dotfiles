@@ -494,6 +494,9 @@ before packages are loaded."
   (setq lsp-enable-on-type-formatting nil)
   (define-key evil-normal-state-map ":" 'evil-goto-mark)
   (define-key evil-normal-state-map "`" 'evil-ex)
+  (define-key evil-visual-state-map "[" 'evil-backward-paragraph)
+  (define-key evil-visual-state-map "]" 'evil-forward-paragraph)
+  (spacemacs/set-leader-keys "kv" 'evil-visual-line)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
