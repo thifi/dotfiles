@@ -191,4 +191,4 @@ exec mate-panel
 exec rm -f /home/itayg/.selfspy/selfspy.pid.lock
 exec selfspy -p ""
 
-exec emacs --daemon
+# exec emacs --daemon
