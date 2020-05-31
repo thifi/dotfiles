@@ -11,8 +11,8 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty || i3-sensible-terminal
 
 # launch Emacs
-bindsym Mod4+e exec emacsclient -c
-bindsym Mod4+Shift+e exec emacs --daemon
+bindsym $mod+e exec emacsclient -c
+# bindsym Mod4+Shift+e exec emacs --daemon
 
 # Screen Shot
 bindsym $mod+Shift+s exec scrot -u -q 100
@@ -26,10 +26,11 @@ bindsym $mod+Shift+b exec notify-send "Alacritty Colorscheme" `$alacritty_colors
 bindsym $mod+Shift+q kill
 
 # change focus
-bindsym $mod+j exec i3-navigate-emacs down
-bindsym $mod+k exec i3-navigate-emacs up
-bindsym $mod+l exec i3-navigate-emacs right
-bindsym $mod+h exec i3-navigate-emacs left
+set $i3-nav ~/dotfiles/i3-navigate-emacs
+bindsym $mod+j exec $i3-nav down
+bindsym $mod+k exec $i3-nav up
+bindsym $mod+l exec $i3-nav right
+bindsym $mod+h exec $i3-nav left
 
 # move focused window
 bindsym $mod+Shift+j move down
@@ -48,8 +49,8 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+Shift+w layout tabbed
+bindsym $mod+Shift+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -108,8 +109,6 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Screen Config
 exec xrandr --output HDMI-1-2 --off --output HDMI-1-1 --off --output eDP-1-1 --mode 1920x1080 --pos 0x512 --rotate normal --output HDMI-0 --off --output DP-1-2 --off --output DP-1-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal
@@ -168,6 +167,10 @@ for_window [class="Pomello"] floating enable
 # for_window [class="Spotify"] move to workspace $workspace10
 # assign [class="Pomello"] $workspace8
 
+# Access the []{} symbols via ctrl as well
+# bindsym --release Ctrl+0 exec --no-startup-id xdotool key --clearmodifiers shift+0
+# bindsym --release Ctrl+9 exec --no-startup-id xdotool key --clearmodifiers shift+9
+
 # workspace screen settings
 workspace $workspace1 output $primary-output
 workspace $workspace2 output $primary-output
@@ -184,9 +187,8 @@ workspace $workspace10 output $secondary-output
 # startup
 exec compton -f -D 4
 exec mate-panel
-exec --no-startup-id nitrogen --restore
-# exec clementine
-# exec spotify
-# exec keepass2
-# exec Pomello
-# exec emacs --daemon
+
+exec rm -f /home/itayg/.selfspy/selfspy.pid.lock
+exec selfspy -p ""
+
+exec emacs --daemon
