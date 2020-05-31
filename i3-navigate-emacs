@@ -18,7 +18,7 @@ function emacs-move()
 function perform-move()
 {
     focussed_workspace=$(get-focussed-window)
-    if [ "$focussed_workspace" = "Emacs" ]; then
+    if [[ "${focussed_workspace,,}" == *"emacs"* ]]; then
         emacs-move "$1"
         result=$?
         if [ $result -ne 0 ]; then
