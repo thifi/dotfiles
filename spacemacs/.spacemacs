@@ -43,7 +43,7 @@ This function should only modify configuration layer settings."
      better-defaults
      emacs-lisp
      git
-     helm
+     ivy
      (lsp :variables
           lsp-enable-on-type-formatting nil
           lsp-before-save-edits nil)
