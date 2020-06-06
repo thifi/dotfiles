@@ -3,6 +3,10 @@
 function get-focussed-window()
 {
     i3-msg -t get_tree | jq -r ".. | select(.focused? == true).window_properties.class"
+    retVal=$?
+    if [ $retVal -ne 0 ]; then
+        notify-send "Failed to get the focused window. jq installed?"
+    fi
 }
 
 function i3-move()
