@@ -6,6 +6,7 @@ cd ~/dotfiles
 stow i3
 stow zsh
 stow spacemacs
+stow config
 cd -
 
 echo "DONE!"
