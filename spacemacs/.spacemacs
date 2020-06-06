@@ -34,11 +34,6 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layers
    '(shell-scripts
      yaml
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
-     ;; `M-m f e R' (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
      auto-completion
      better-defaults
      emacs-lisp
@@ -56,15 +51,11 @@ This function should only modify configuration layer settings."
      ;; spell-checking
      syntax-checking
      version-control
-     treemacs
+     ;; treemacs
 
      python
      c-c++
      rust
-     haskell
-     llvm-mode
-     keyfreq
-     themes-megapack
      )
 
    ;; List of additional packages that will be installed without being
