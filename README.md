@@ -32,7 +32,7 @@ and make any suggestion for improvements !
 - [jumpapp](https://github.com/mkropat/jumpapp)
 - [compton](https://github.com/chjj/compton)
 - [scrot](https://github.com/dreamer/scrot)
-- [Gnome Do](http://do.cooperteam.net/)
+- [Albert](https://albertlauncher.github.io/docs/installing/)
 
 ## Install
 
