@@ -509,6 +509,11 @@ before packages are loaded."
   ;; Easier access to parentheses (w/ Caps bound as Ctrl)
   (define-key evil-insert-state-map (kbd "C-9") 'my/insert-paren-start)
   (define-key evil-insert-state-map (kbd "C-0") 'my/insert-paren-end)
+
+  ;; -----------------------------------------------------------------
+  ;; TODO: Automatically disable `font-lock-mode` on iedit/multiple-cursors.
+  ;; atleast on c-mode, it causes major slowness due to 'c-font-lock-fontify-region'
+  ;; -----------------------------------------------------------------
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
