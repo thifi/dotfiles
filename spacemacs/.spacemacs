@@ -56,6 +56,10 @@ This function should only modify configuration layer settings."
      python
      c-c++
      rust
+
+     ;; private layers
+     llvm-mode
+     keyfreq
      )
 
    ;; List of additional packages that will be installed without being
