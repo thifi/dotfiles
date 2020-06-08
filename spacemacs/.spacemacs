@@ -510,6 +510,13 @@ before packages are loaded."
   (define-key evil-insert-state-map (kbd "C-9") 'my/insert-paren-start)
   (define-key evil-insert-state-map (kbd "C-0") 'my/insert-paren-end)
 
+  ;; Drop ivy's default initial inputs (kinda annoying)
+  ;;
+  ;; FYI - Can do this more specifically like so:
+  ;;   (setcdr (assoc 'counsel-M-x ivy-initial-inputs-alist) "")
+  ;;
+  (setq ivy-initial-inputs-alist nil)
+
   ;; -----------------------------------------------------------------
   ;; TODO: Automatically disable `font-lock-mode` on iedit/multiple-cursors.
   ;; atleast on c-mode, it causes major slowness due to 'c-font-lock-fontify-region'
