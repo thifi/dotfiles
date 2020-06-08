@@ -42,7 +42,7 @@ This function should only modify configuration layer settings."
      (lsp :variables
           lsp-enable-on-type-formatting nil
           lsp-before-save-edits nil)
-     ;; markdown
+     markdown
      multiple-cursors
      ;; org
      (shell :variables
