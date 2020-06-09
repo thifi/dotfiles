@@ -1,0 +1,46 @@
+// ktrl Example Configuration File
+// -------------------------------
+//
+// ktrl config files use `ron` (Rust Object Notation) to serialize
+// the text into the internal `cfg::Cfg` struct.
+//
+// - The full KEY_... listing can be found inside the `keys::KeyCode` enum
+// - Layer entries are mapping between a source `KeyCode` into an `Action` (more on that below)
+//
+(
+    // ktrl will register a TapHold as an hold after 300ms
+    tap_hold_wait_time: 300,
+
+    // ktrl will register a TapDance if all taps occur within a 1000ms period (1s)
+    tap_dance_wait_time: 1000,
+
+    // Gives names to layers
+    layer_aliases: {
+        "base": 0,
+        "ivy": 1,
+    },
+
+    layer_profiles: {},
+
+    layers: [
+        // Layer 0 (Base Layer)
+        //
+        //   Layer 0 is a bit special.
+        //   When ktrl stats-up, it automatically enables this layer.
+        //   After that, it can never be turned off.
+        //   I.E it configures the default behavior (when all other layers are off).
+        //
+        //   All the layer entries repeat the same pattern.
+        //   They map a source `KeyCode` to an `Action`.
+        //
+        {
+            KEY_LEFTCTRL:  Tap(Key(KEY_LEFTCTRL)),
+            KEY_CAPSLOCK: Tap(Key(KEY_LEFTCTRL)),
+            KEY_TAB: TapHold(Key(KEY_TAB), Key(KEY_CAPSLOCK)),
+        },
+        // ivy layer
+        {
+            KEY_LEFTMETA: Tap(Key(KEY_LEFTCTRL)),
+        },
+    ],
+)
