@@ -60,6 +60,7 @@ This function should only modify configuration layer settings."
      ;; private layers
      llvm-mode
      keyfreq
+     alt-emacs
      )
 
    ;; List of additional packages that will be installed without being
