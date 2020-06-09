@@ -9,7 +9,7 @@
 //
 (
     // ktrl will register a TapHold as an hold after 300ms
-    tap_hold_wait_time: 300,
+    tap_hold_wait_time: 200,
 
     // ktrl will register a TapDance if all taps occur within a 1000ms period (1s)
     tap_dance_wait_time: 1000,
@@ -40,7 +40,7 @@
         },
         // ivy layer
         {
-            KEY_LEFTMETA: Tap(Key(KEY_LEFTCTRL)),
+            KEY_SPACE: TapHold(Key(KEY_SPACE), Key(KEY_LEFTCTRL)),
         },
     ],
 )
