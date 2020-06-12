@@ -18,6 +18,7 @@
     layer_aliases: {
         "base": 0,
         "ivy": 1,
+        "caps": 2,
     },
 
     layer_profiles: {},
@@ -34,14 +35,19 @@
         //   They map a source `KeyCode` to an `Action`.
         //
         {
-            KEY_LEFTCTRL:  Tap(Key(KEY_LEFTCTRL)),
             KEY_CAPSLOCK: Tap(Key(KEY_LEFTCTRL)),
-            KEY_TAB: TapHold(Key(KEY_TAB), Key(KEY_CAPSLOCK)),
             KEY_ESC: TildeEsc,
+
+            KEY_F1: TapHold(Key(KEY_F1), ToggleLayerAlias("ivy")),
+            KEY_F2: TapHold(Key(KEY_F2), ToggleLayerAlias("caps")),
         },
-        // ivy layer
+        // 1: ivy layer
         {
             KEY_SPACE: TapHold(Key(KEY_SPACE), Key(KEY_LEFTCTRL)),
+        },
+        // 2: caps layer
+        {
+            KEY_CAPSLOCK: Tap(Key(KEY_CAPSLOCK)),
         },
     ],
 )
