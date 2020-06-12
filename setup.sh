@@ -9,4 +9,7 @@ stow spacemacs
 stow config
 cd -
 
+rm -f /opt/ktrl/cfg.ron
+ln -s ~/dotfiles/ktrl/cfg.ron /opt/ktrl/cfg.ron
+
 echo "DONE!"
