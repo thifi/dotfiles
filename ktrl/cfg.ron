@@ -37,6 +37,7 @@
             KEY_LEFTCTRL:  Tap(Key(KEY_LEFTCTRL)),
             KEY_CAPSLOCK: Tap(Key(KEY_LEFTCTRL)),
             KEY_TAB: TapHold(Key(KEY_TAB), Key(KEY_CAPSLOCK)),
+            KEY_ESC: TildeEsc,
         },
         // ivy layer
         {
