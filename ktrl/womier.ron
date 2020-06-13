@@ -1,12 +1,3 @@
-// ktrl Example Configuration File
-// -------------------------------
-//
-// ktrl config files use `ron` (Rust Object Notation) to serialize
-// the text into the internal `cfg::Cfg` struct.
-//
-// - The full KEY_... listing can be found inside the `keys::KeyCode` enum
-// - Layer entries are mapping between a source `KeyCode` into an `Action` (more on that below)
-//
 (
     // ktrl will register a TapHold as an hold after 300ms
     tap_hold_wait_time: 200,
@@ -19,27 +10,22 @@
         "base": 0,
         "ivy": 1,
         "caps": 2,
+        "tilde": 3,
     },
 
     layer_profiles: {},
 
     layers: [
         // Layer 0 (Base Layer)
-        //
-        //   Layer 0 is a bit special.
-        //   When ktrl stats-up, it automatically enables this layer.
-        //   After that, it can never be turned off.
-        //   I.E it configures the default behavior (when all other layers are off).
-        //
-        //   All the layer entries repeat the same pattern.
-        //   They map a source `KeyCode` to an `Action`.
-        //
         {
             KEY_CAPSLOCK: Tap(Key(KEY_LEFTCTRL)),
-            KEY_ESC: TildeEsc,
+
+            KEY_GRAVE: Tap(KEY_ESC),
+            KEY_ESC: Tap(KEY_GRAVE),
 
             KEY_F1: TapHold(Key(KEY_F1), ToggleLayerAlias("ivy")),
             KEY_F2: TapHold(Key(KEY_F2), ToggleLayerAlias("caps")),
+            KEY_F3: TapHold(Key(KEY_F3), ToggleLayerAlias("tilde")),
         },
         // 1: ivy layer
         {
@@ -48,6 +34,11 @@
         // 2: caps layer
         {
             KEY_CAPSLOCK: Tap(Key(KEY_CAPSLOCK)),
+        },
+        // 3: tilde restore
+        {
+            KEY_GRAVE: Tap(KEY_GRAVE),
+            KEY_ESC: TildeEsc,
         },
     ],
 )
