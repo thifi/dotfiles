@@ -4,5 +4,5 @@
 #   udevadm info -a -n /dev/input/by-id/<DEV> | rg idProduct
 #
 
-ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c52b", ACTION=="add", RUN+="/usr/local/bin/womier-udev-add.sh"
-ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c52b", ACTION=="remove", RUN+="/usr/local/bin/womier-udev-remove.sh"
+ATTRS{idVendor}=="4242", ATTRS{idProduct}=="4242", ACTION=="add", RUN+="/usr/local/bin/womier-udev-add.sh"
+ATTRS{idVendor}=="4242", ATTRS{idProduct}=="4242", ACTION=="remove", RUN+="/usr/local/bin/womier-udev-remove.sh"
