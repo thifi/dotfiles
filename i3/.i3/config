@@ -22,6 +22,9 @@ set $alacritty_colorscheme alacritty-colorscheme
 bindsym $mod+Shift+m exec $alacritty_colorscheme -C ~/.alacritty-theme/themes -T
 bindsym $mod+Shift+b exec notify-send "Alacritty Colorscheme" `$alacritty_colorscheme -s`
 
+# Google-Chrome
+bindsym $mod+w exec exec google-chrome
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
