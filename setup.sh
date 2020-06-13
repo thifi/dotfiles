@@ -12,7 +12,8 @@ cd -
 # ktrl setup
 
 rm -f /opt/ktrl/*.ron
-rm -f /usr/local/bin/womier*
+sudo rm -f /usr/local/bin/womier*
+sudo rm -f /etc/udev/rules.d/80-womier.rules
 
 ln -s ~/dotfiles/ktrl/default.ron /opt/ktrl/default.ron
 ln -s ~/dotfiles/ktrl/womier.ron /opt/ktrl/womier.ron
