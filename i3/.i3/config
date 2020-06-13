@@ -189,7 +189,6 @@ workspace $workspace10 output $secondary-output
 exec compton -f -D 4
 exec mate-panel
 
-exec rm -f /home/itayg/.selfspy/selfspy.pid.lock
-exec selfspy -p ""
-
-# exec emacs --daemon
+exec ~/.cargo/bin/alt
+exec albert
+exec emacs --daemon
