@@ -20,8 +20,8 @@
         {
             KEY_CAPSLOCK: Tap(Key(KEY_LEFTCTRL)),
 
-            KEY_GRAVE: Tap(KEY_ESC),
-            KEY_ESC: Tap(KEY_GRAVE),
+            KEY_GRAVE: Tap(Key(KEY_ESC)),
+            KEY_ESC: Tap(Key(KEY_GRAVE)),
 
             KEY_F1: TapHold(Key(KEY_F1), ToggleLayerAlias("ivy")),
             KEY_F2: TapHold(Key(KEY_F2), ToggleLayerAlias("caps")),
@@ -37,7 +37,7 @@
         },
         // 3: tilde restore
         {
-            KEY_GRAVE: Tap(KEY_GRAVE),
+            KEY_GRAVE: Tap(Key(KEY_GRAVE)),
             KEY_ESC: TildeEsc,
         },
     ],
