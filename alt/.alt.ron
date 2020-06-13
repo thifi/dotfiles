@@ -1,0 +1,11 @@
+(
+  aggs: [
+  // Ivy Event Aggregator
+    (requirements: [
+        RqFocus("emacs"),
+        RqExtEvent("ivy"),
+    ],
+    on_ipc: "TurnOnLayerAlias(\"ivy\")",
+    off_ipc: "TurnOffLayerAlias(\"ivy\")"),
+  ],
+)

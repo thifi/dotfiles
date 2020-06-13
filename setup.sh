@@ -7,6 +7,7 @@ stow i3
 stow zsh
 stow spacemacs
 stow config
+stow alt
 cd -
 
 # ktrl setup
