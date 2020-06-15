@@ -114,9 +114,6 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# Screen Config
-exec xrandr --output HDMI-1-2 --off --output HDMI-1-1 --off --output eDP-1-1 --mode 1920x1080 --pos 0x512 --rotate normal --output HDMI-0 --off --output DP-1-2 --off --output DP-1-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -191,9 +188,12 @@ workspace $workspace10 output $secondary-output
 # startup
 exec compton -f -D 4
 exec mate-panel
-
+exec nitrogen --restore
 exec ~/.cargo/bin/alt
 exec ~/dotfiles/i3blocks-ktrl/i3_ktrl_sub.py
 
 exec albert
 exec emacs --daemon
+
+# Screen Config
+exec_always ~/.screenlayout/office.sh
