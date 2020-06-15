@@ -41,4 +41,4 @@ font:
     style: italic
 
 env:
-  WINIT_X11_SCALE_FACTOR: "1.1"
+  WINIT_X11_SCALE_FACTOR: "1.0"

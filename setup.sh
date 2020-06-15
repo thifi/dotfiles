@@ -8,6 +8,7 @@ stow zsh
 stow spacemacs
 stow config
 stow alt
+stow xrandr
 cd -
 
 # ktrl setup
