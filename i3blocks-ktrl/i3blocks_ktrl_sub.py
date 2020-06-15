@@ -22,7 +22,7 @@ def main():
     socket.setsockopt(zmq.SUBSCRIBE, b"layer")
     print("Connected to ktrl's notification server: " + endpoint)
 
-    on_set = set()
+    on_set = set([b"0"])
     out_path = expanduser("~/.ktrl.state")
     print("Out file = " + out_path)
     out = open(out_path, "wb+")
@@ -37,9 +37,8 @@ def main():
         elif state == b"off":
             on_set.discard(idx)
 
-        # on_strs = map(lambda x: str(x), list(on_set))
-        out_str = b" ".join(list(on_set)) + b"\n"
-        print(b"WRITE: " + out_str)
+        out_str = b"KTRL " + b"".join(list(on_set)) + b"\n"
+        print(out_str)
 
         out.truncate(0)
         out.write(out_str)
