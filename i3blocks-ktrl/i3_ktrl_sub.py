@@ -44,12 +44,15 @@ def main():
             on_set.discard(idx)
 
         sorted_ons = sorted(list(on_set))
-        out_str = b"KTRL " + b"".join(sorted_ons) + b"\n"
+        out_str = b"KTRL " + b"-".join(sorted_ons) + b"\n"
         print(out_str)
 
         out.truncate(0)
         out.seek(0, 0)
         out.write(out_str)
+        out.write(out_str)
+        if len(on_set) > 1:
+            out.write(b"#FFF000\n")
         out.flush()
 
         os.system("pkill -SIGRTMIN+12 i3blocks")
