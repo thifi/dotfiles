@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import os
 import zmq
 import argparse
 from os.path import expanduser
@@ -37,13 +38,16 @@ def main():
         elif state == b"off":
             on_set.discard(idx)
 
-        out_str = b"KTRL " + b"".join(list(on_set)) + b"\n"
+        sorted_ons = sorted(list(on_set))
+        out_str = b"KTRL " + b"".join(sorted_ons) + b"\n"
         print(out_str)
 
         out.truncate(0)
+        out.seek(0, 0)
         out.write(out_str)
         out.flush()
 
+        os.system("pkill -SIGRTMIN+12 i3blocks")
 
 if __name__ == "__main__":
     main()
