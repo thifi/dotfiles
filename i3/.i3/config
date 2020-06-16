@@ -193,5 +193,7 @@ exec compton -f -D 4
 exec mate-panel
 
 exec ~/.cargo/bin/alt
+exec ~/dotfiles/i3blocks-ktrl/i3_ktrl_sub.py
+
 exec albert
 exec emacs --daemon

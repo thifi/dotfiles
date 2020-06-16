@@ -28,6 +28,11 @@ def main():
     print("Out file = " + out_path)
     out = open(out_path, "wb+")
 
+    out.truncate(0)
+    out.seek(0, 0)
+    out.write(b"KTRL: 0\n")
+    out.flush()
+
     while True:
         message = socket.recv()
         topic, message = message.split(b" ")
