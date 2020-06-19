@@ -19,6 +19,9 @@
         {
             KEY_CAPSLOCK: Tap(Key(KEY_LEFTCTRL)),
 
+            KEY_LEFT: TapModo(KEY_LEFTMETA, Key(KEY_LEFT), Key(KEY_HOME)),
+            KEY_RIGHT: TapModo(KEY_LEFTMETA, Key(KEY_RIGHT), Key(KEY_END)),
+
             KEY_F1: TapHold(Key(KEY_F1), ToggleLayerAlias("ivy")),
             KEY_F2: TapHold(Key(KEY_F2), ToggleLayerAlias("caps")),
         },
