@@ -61,6 +61,7 @@ This function should only modify configuration layer settings."
      llvm-mode
      keyfreq
      alt-emacs
+     themes-megapack
      )
 
    ;; List of additional packages that will be installed without being
@@ -201,7 +202,9 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(spacemacs-dark
-                         spacemacs-light)
+                         spacemacs-light
+                         doom-one
+                         doom-dracula)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
