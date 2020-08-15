@@ -1,0 +1,100 @@
+{
+    "FSharp.useSdkScripts": true,
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
+        }
+    ],
+    "whichkey.delay": 600,
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "f", "d"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vspacecode.bindingOverrides": [
+        {
+            "keys": "m",
+            "name": "Major...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "r",
+                    "name": "Send Region",
+                    "type": "command",
+                    "command": "fsi.SendSelection",
+                },
+                {
+                    "key": "s",
+                    "name": "Send Region",
+                    "type": "command",
+                    "command": "fsi.SendSelection",
+                },
+                {
+                    "key": "b",
+                    "name": "Send File / Buffer",
+                    "type": "command",
+                    "command": "fsi.SendFile",
+                },
+                {
+                    "key": "m",
+                    "name": "Show Hover",
+                    "type": "command",
+                    "command": "editor.action.showHover",
+                }
+            ]
+        },
+        {
+            "keys": "f.e",
+            "name": "Edit Settings",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "d",
+                    "name": "Settings JSON",
+                    "type": "command",
+                    "command": "workbench.action.openSettingsJson"
+                },
+                {
+                    "key": "g",
+                    "name": "Settings Graphical",
+                    "type": "command",
+                    "command": "workbench.action.openSettings"
+                },
+            ]
+        }
+    ],
+    "window.zoomLevel": 0,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 18,
+    "workbench.activityBar.visible": true,
+    "workbench.colorTheme": "Night Owl",
+    "crystal-lang.completion": true,
+    "crystal-lang.hover": true,
+    "editor.multiCursorModifier": "alt",
+    "[fsharp]": {
+        "editor.defaultFormatter": "Ionide.Ionide-fsharp"
+    },
+}

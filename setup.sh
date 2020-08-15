@@ -9,6 +9,7 @@ stow spacemacs
 stow config
 stow alt
 stow xrandr
+stow vscode
 cd -
 
 # ktrl setup
