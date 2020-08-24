@@ -14,7 +14,7 @@ and make any suggestion for improvements !
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [fasd](https://github.com/clvv/fasd)
 - [Terminator](https://wiki.archlinux.org/index.php/Terminator)
-- Alacritty (rust) + alacritty-theme
+- Alacritty (rust) + alacritty-theme (Their is vi mode is awesome!!)
 - [fzf](https://github.com/junegunn/fzf)
 - exa (rust)
 - bat (rust)
