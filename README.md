@@ -41,3 +41,11 @@ sudo apt-get install stow
 git clone https://github.com/ItayGarin/dotfiles ~/dotfiles
 ./dotfiles/setup.sh
 ```
+
+## home-manager
+
+I had to add this to `~/.profile` for nix desktop files to register on Ubuntu.
+
+```shell
+export XDG_DATA_DIRS=$HOME/.nix-profile/share:$HOME/.share:"${XDG_DATA_DIRS:-/usr/local/share/:/usr/share/}"
+```
