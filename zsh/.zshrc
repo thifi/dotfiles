@@ -60,3 +60,4 @@ alias nb="python3 /home/itayg/workspace/NextSilicone/omp-playground/nextsilicon_
 . /home/itayg/.nix-profile/etc/profile.d/nix.sh
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+if [ -e /home/igarin/.nix-profile/etc/profile.d/nix.sh ]; then . /home/igarin/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

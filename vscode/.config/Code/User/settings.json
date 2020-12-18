@@ -90,7 +90,7 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 18,
     "workbench.activityBar.visible": true,
-    "workbench.colorTheme": "Night Owl",
+    "workbench.colorTheme": "Visual Studio 2019 Dark",
     "crystal-lang.completion": true,
     "crystal-lang.hover": true,
     "editor.multiCursorModifier": "alt",
