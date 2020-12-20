@@ -1,6 +1,0 @@
-package fasd
-package fish_logo
-package fzf
-package https://github.com/jethrokuan/fzf
-theme default
-theme robbyrussell
