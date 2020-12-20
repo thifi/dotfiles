@@ -13,26 +13,37 @@
   home.sessionVariables = { EDITOR = "vim"; };
 
   home.packages = [
-    pkgs.meld
-    pkgs.vim
+
+    # GUI
+    pkgs.alacritty
     pkgs.emacs
     pkgs.google-chrome
-    pkgs.alacritty
-    pkgs.qbittorrent
     pkgs.keepass
+    pkgs.meld
+    pkgs.qbittorrent
+    pkgs.vim
 
+    # Cloud
     pkgs.awscli
     pkgs.google-cloud-sdk
 
-    pkgs.fasd
-    pkgs.ripgrep
-    pkgs.bat
-    pkgs.fd
-    pkgs.jq
-    pkgs.htop
+    # Languages
+    pkgs.go
+    pkgs.rustup
+    pkgs.nodejs
+    pkgs.yarn
 
-    pkgs.nixfmt
+    # CLI
+    pkgs.bat
+    pkgs.fasd
+    pkgs.fd
+    pkgs.htop
+    pkgs.jq
+    pkgs.ripgrep
+
+    # Nix
     pkgs.nix-prefetch-github
+    pkgs.nixfmt
   ];
 
   programs.fish = {
@@ -116,14 +127,14 @@
     delta.enable = true;
     aliases = {
       b = "branch";
+      ci = "commit";
       co = "checkout";
-      s = "status";
-      st = "status";
       d = "diff";
       di = "diff";
       dt = "difftool";
       l = "log";
-      ci = "commit";
+      s = "status";
+      st = "status";
     };
   };
 
@@ -151,6 +162,7 @@
       }
       {
         invocation = "view";
+        shortcut = "v";
         execution = "less {file}";
       }
       {
