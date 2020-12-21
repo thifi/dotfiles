@@ -1,3 +1,4 @@
+package aws
 package fasd
 package fish_logo
 package fzf

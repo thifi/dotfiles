@@ -20,3 +20,8 @@ alias mc="make clean"
 alias st="git status"
 alias di="git diff"
 alias spacemacs="env HOME=/home/itayg/spacehome emacs"
+
+set PATH ~/node_modules/.bin $PATH
+set PATH /usr/local/go/bin $PATH
+set PATH ~/go/bin $PATH
+set PATH ~/scripts/ $PATH
