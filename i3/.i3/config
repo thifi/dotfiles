@@ -79,7 +79,13 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace10 "10"
 
-set $primary-output DP-1-1
+# Udim
+set $primary-output HDMI-0
+
+# Office
+# set $primary-output DP-1-1
+
+# Laptop
 set $secondary-output eDP-1-1
 
 # move focused container to workspace
@@ -142,8 +148,8 @@ bindsym $mod+r mode "resize"
 
 set $bg-color	           #414858
 set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
+set $text-color          #ffffff
+set $inactive-text-color #b8b8b8
 set $urgent-bg-color     #E53935
 
 # window colors
@@ -163,15 +169,6 @@ bar {
 # Pomello always floats
 for_window [class="Pomello"] floating enable
 
-# default workspaces
-# assign [class="Spotify"] $workspace10
-# for_window [class="Spotify"] move to workspace $workspace10
-# assign [class="Pomello"] $workspace8
-
-# Access the []{} symbols via ctrl as well
-# bindsym --release Ctrl+0 exec --no-startup-id xdotool key --clearmodifiers shift+0
-# bindsym --release Ctrl+9 exec --no-startup-id xdotool key --clearmodifiers shift+9
-
 # workspace screen settings
 workspace $workspace1 output $primary-output
 workspace $workspace2 output $primary-output
@@ -188,12 +185,11 @@ workspace $workspace10 output $secondary-output
 # startup
 exec compton -f -D 4
 exec mate-panel
-exec nitrogen --restore
 exec ~/.cargo/bin/alt
 exec ~/dotfiles/i3blocks-ktrl/i3_ktrl_sub.py
 
 exec albert
-exec emacs --daemon
+exec emacs-snapshot --daemon
 
 # Screen Config
-exec_always ~/.screenlayout/office.sh
+exec nitrogen --restore
