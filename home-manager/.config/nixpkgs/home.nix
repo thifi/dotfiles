@@ -15,9 +15,7 @@
   home.packages = [
 
     # GUI
-    pkgs.alacritty
     pkgs.emacs
-    pkgs.google-chrome
     pkgs.keepass
     pkgs.meld
     pkgs.qbittorrent
@@ -32,6 +30,7 @@
     pkgs.rustup
     pkgs.nodejs
     pkgs.yarn
+    pkgs.cmake
 
     # CLI
     pkgs.bat
