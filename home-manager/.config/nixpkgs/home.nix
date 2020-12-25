@@ -15,8 +15,8 @@
   home.packages = [
 
     # GUI
+    pkgs.arandr
     pkgs.emacs
-    pkgs.keepass
     pkgs.meld
     pkgs.qbittorrent
     pkgs.vim
@@ -26,18 +26,22 @@
     pkgs.google-cloud-sdk
 
     # Languages
-    pkgs.go
-    pkgs.rustup
-    pkgs.nodejs
-    pkgs.yarn
     pkgs.cmake
+    pkgs.go
+    pkgs.nodejs
+    pkgs.nodePackages.typescript
+    pkgs.rustup
+    pkgs.yarn
 
     # CLI
     pkgs.bat
+    pkgs.ccrypt
     pkgs.fasd
     pkgs.fd
+    pkgs.fusuma
     pkgs.htop
     pkgs.jq
+    pkgs.p7zip
     pkgs.ripgrep
 
     # Nix
