@@ -26,10 +26,12 @@
     pkgs.google-cloud-sdk
 
     # Languages
+    #
+    # NOTE: pkgs.node is annoying.
+    #       npm install -g doesn't work well.
+    #
     pkgs.cmake
     pkgs.go
-    pkgs.nodejs
-    pkgs.nodePackages.typescript
     pkgs.rustup
     pkgs.yarn
 
