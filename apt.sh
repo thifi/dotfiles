@@ -5,6 +5,7 @@
 
 sudo apt install google-chrome-stable # tiny mouse cursor @home-manager
 sudo apt install keepass2 # awful and unreadable colorschema @home-manager
+sudo apt install alacritty # doesn't work when install from Nix (same goes for Kitty)
 
 
 # On a PC

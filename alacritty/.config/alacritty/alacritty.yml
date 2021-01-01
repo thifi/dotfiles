@@ -1,0 +1,15 @@
+font:
+  normal:
+    family: Jetbrains Mono
+  bold:
+    family: Jetbrains Mono
+    style: bold
+  italic:
+    family: Jetbrains Mono
+    style: italic
+
+shell:
+  program: tmux
+
+env:
+  WINIT_X11_SCALE_FACTOR: "1.1"
