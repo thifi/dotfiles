@@ -112,7 +112,11 @@
       }
     ];
 
-    shellAliases = { bd = "bg && disown"; };
+    shellAliases = {
+       bd = "bg && disown";
+       ip = "~/dotfiles/scripts/color-ip";
+       oip = "/usr/sbin/ip";
+       };
 
     functions = {
       fish_greeting = "fish_logo";
