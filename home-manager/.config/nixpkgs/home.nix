@@ -40,11 +40,13 @@
     pkgs.ccrypt
     pkgs.fasd
     pkgs.fd
-    pkgs.fusuma
+    pkgs.gawk
     pkgs.htop
     pkgs.jq
     pkgs.p7zip
     pkgs.ripgrep
+    pkgs.tmux
+    pkgs.xclip
 
     # Nix
     pkgs.nix-prefetch-github

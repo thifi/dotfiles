@@ -4,7 +4,8 @@
 # due to weird bugs....
 
 sudo apt install google-chrome-stable # tiny mouse cursor @home-manager
-sudo apt install keepass2 # aweful and unreadable colorschema @home-manager
+sudo apt install keepass2 # awful and unreadable colorschema @home-manager
+
 
 # On a PC
 # sudo apt install regolith-desktop-standard

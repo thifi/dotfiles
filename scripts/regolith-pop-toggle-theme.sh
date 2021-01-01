@@ -9,6 +9,6 @@ if [ $STATE == "Pop" ]; then
     echo "Regolith" > $STATE_FILE
 else
     echo "Changing to Pop"
-    gsettings set org.gnome.desktop.interface gtk-theme Pop
+    gsettings set org.gnome.desktop.interface gtk-theme Pop-dark
     echo "Pop" > $STATE_FILE
 fi
