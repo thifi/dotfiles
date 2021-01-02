@@ -1,15 +1,11 @@
 #!/bin/bash
 
-# These aren't installed by home-manager 
-# due to weird bugs....
+set -e
 
-sudo apt install google-chrome-stable # tiny mouse cursor @home-manager
-sudo apt install keepass2 # awful and unreadable colorschema @home-manager
-sudo apt install alacritty # doesn't work when install from Nix (same goes for Kitty)
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list'
+sudo apt-get update
+sudo apt-get install -y google-chrome-stable # tiny mouse cursor @home-manager
 
-
-# On a PC
-# sudo apt install regolith-desktop-standard
-
-# On a Laptop
-sudo apt install regolith-desktop-mobile
+sudo apt-get install -y keepass2 # awful and unreadable colorschema @home-manager
+sudo apt-get install -y alacritty # doesn't work when install from Nix (same goes for Kitty)
