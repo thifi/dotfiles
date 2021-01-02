@@ -4,6 +4,7 @@ sudo npm install -g \
     typescript \
     ts-node \
     serverless \
-    nodemon
+    nodemon \
+    alacritty-themes
 
 
