@@ -57,6 +57,10 @@
 
   programs.fish = {
     enable = true;
+
+    # Auto-exec tmux when launching fish
+    shellInit = "if test $TERM != \"screen-256color\"; exec tmux; end;";
+
     plugins = [
       {
         name = "bass";
