@@ -38,20 +38,29 @@ RUN touch /home/${user}/.bash_profile
 
 WORKDIR $tasks
 
-COPY . /home/${user}/dotfiles/
-
 COPY tasks/00-prerequisites.sh .
-RUN sudo chmod +x 00-prerequisites.sh
 RUN ./00-prerequisites.sh
 
 COPY tasks/01-nix.sh .
-RUN sudo chmod +x 01-nix.sh
 RUN ./01-nix.sh
 
+COPY home-manager /home/${user}/dotfiles/home-manager
 COPY tasks/02-home-manager.sh .
-RUN sudo chmod +x 02-home-manager.sh
 RUN ./02-home-manager.sh
 
 COPY tasks/03-apt.sh .
-RUN sudo chmod +x 03-apt.sh
 RUN ./03-apt.sh
+
+COPY tasks/04-npm.sh .
+RUN ./04-npm.sh
+
+COPY tasks/05-vscode.sh .
+RUN ./05-vscode.sh
+
+COPY spacemacs /home/${user}/dotfiles/spacemacs
+COPY tasks/06-spacemacs.sh .
+RUN ./06-spacemacs.sh
+
+COPY alacritty /home/${user}/dotfiles/alacritty
+COPY tasks/07-alacritty.sh .
+RUN ./07-alacritty.sh .
