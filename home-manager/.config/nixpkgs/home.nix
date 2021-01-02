@@ -12,45 +12,47 @@
 
   home.sessionVariables = { EDITOR = "vim"; };
 
-  home.packages = [
+  home.packages = with pkgs; [
 
     # GUI
-    pkgs.arandr
-    pkgs.emacs
-    pkgs.meld
-    pkgs.qbittorrent
-    pkgs.vim
+    arandr
+    emacs
+    meld
+    qbittorrent
 
     # Cloud
-    pkgs.awscli
-    pkgs.google-cloud-sdk
+    awscli
+    google-cloud-sdk
 
     # Languages
     #
     # NOTE: pkgs.node is annoying.
     #       npm install -g doesn't work well.
     #
-    pkgs.cmake
-    pkgs.go
-    pkgs.rustup
-    pkgs.yarn
+    cmake
+    go
+    rustup
+    yarn
 
     # CLI
-    pkgs.bat
-    pkgs.ccrypt
-    pkgs.fasd
-    pkgs.fd
-    pkgs.gawk
-    pkgs.htop
-    pkgs.jq
-    pkgs.p7zip
-    pkgs.ripgrep
-    pkgs.tmux
-    pkgs.xclip
+    autorandr
+    bat
+    ccrypt
+    fasd
+    fd
+    gawk
+    htop
+    jq
+    p7zip
+    ripgrep
+    tmux
+    vim
+    xclip
 
     # Nix
-    pkgs.nix-prefetch-github
-    pkgs.nixfmt
+    nix-prefetch-github
+    nix-tree
+    nixfmt
   ];
 
   programs.fish = {
@@ -116,6 +118,7 @@
        bd = "bg && disown";
        ip = "~/dotfiles/scripts/color-ip";
        oip = "/usr/sbin/ip";
+       at = "alacritty-themes";
        };
 
     functions = {
