@@ -1,18 +1,17 @@
-FROM archlinux:latest
+FROM archlinux:base-devel
 
 ARG user=itayg
 ARG tasks=/tmp/tasks
 
 # --------------
 
-RUN pacman -Sy
-RUN pacman -S --noconfirm sudo
+RUN pacman -Syu --noconfirm
 
 # --------------
 
 RUN groupadd -r $user
 RUN useradd -r -g $user $user
-RUN usermod -aG sudo $user
+RUN usermod -aG wheel $user
 RUN mkhomedir_helper $user
 RUN chsh -s /bin/bash $user
 RUN echo "${user}     ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
