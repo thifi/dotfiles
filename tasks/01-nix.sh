@@ -2,10 +2,6 @@
 
 set -e
 
-#
-# Install Nix
-#
-
 curl -L "https://nixos.org/nix/install" | sh
 
 echo "if [ -e /home/$USER/.nix-profile/etc/profile.d/nix.sh ]; then . /home/$USER/.nix-profile/etc/profile.d/nix.sh; fi" >> ~/.bashrc

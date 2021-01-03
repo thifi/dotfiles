@@ -42,3 +42,12 @@ font:
 
 env:
   WINIT_X11_SCALE_FACTOR: "1.1"
+
+# Ctrl+V is a more familiar default
+#
+# Also, Ctrl+Shift+V instead of Shift+Insert since 
+# Insert is missing on the asus-g14 unfortuantely
+#
+key_bindings:
+  - { key: V, mods: Control,       action: Paste}
+  - { key: V, mods: Control|Shift, action: PasteSelection}
