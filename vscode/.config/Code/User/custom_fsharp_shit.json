@@ -1,0 +1,53 @@
+    "vspacecode.bindingOverrides": [
+        {
+            "keys": "m",
+            "name": "Major...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "r",
+                    "name": "Send Region",
+                    "type": "command",
+                    "command": "fsi.SendSelection",
+                },
+                {
+                    "key": "s",
+                    "name": "Send Region",
+                    "type": "command",
+                    "command": "fsi.SendSelection",
+                },
+                {
+                    "key": "b",
+                    "name": "Send File / Buffer",
+                    "type": "command",
+                    "command": "fsi.SendFile",
+                },
+                {
+                    "key": "m",
+                    "name": "Show Hover",
+                    "type": "command",
+                    "command": "editor.action.showHover",
+                }
+            ]
+        },
+        {
+            "keys": "f.e",
+            "name": "Edit Settings",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "d",
+                    "name": "Settings JSON",
+                    "type": "command",
+                    "command": "workbench.action.openSettingsJson"
+                },
+                {
+                    "key": "g",
+                    "name": "Settings Graphical",
+                    "type": "command",
+                    "command": "workbench.action.openSettings"
+                },
+            ]
+        }
+    ],
+

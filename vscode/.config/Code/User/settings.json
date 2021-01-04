@@ -60,10 +60,12 @@
         "**/i3/config": "i3",
     },
     "window.zoomLevel": 1,
+    "editor.fontFamily": "Jetbrains Mono",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 18,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.colorTheme": "Default Dark+",
     "python.languageServer": "Pylance"
 }
