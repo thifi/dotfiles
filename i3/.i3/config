@@ -193,3 +193,4 @@ exec emacs-snapshot --daemon
 
 # Screen Config
 exec nitrogen --restore
+exec_always ~/dotfiles/xrandr/.screenlayout/amishav.sh

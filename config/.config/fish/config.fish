@@ -22,6 +22,9 @@ alias di="git diff"
 alias spacemacs="env HOME=/home/itayg/spacehome emacs"
 
 set PATH ~/node_modules/.bin $PATH
-set PATH /usr/local/go/bin $PATH
-set PATH ~/go/bin $PATH
 set PATH ~/scripts/ $PATH
+
+set GOROOT /usr/local/go
+set GOPATH $HOME/go
+set PATH $GOPATH/bin $PATH
+set PATH $GOROOT/bin $PATH
