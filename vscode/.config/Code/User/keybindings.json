@@ -3,7 +3,7 @@
 	{
 		"key": "space",
 		"command": "vspacecode.space",
-		"when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive"
+		"when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
 	},
 	{
 		"key": "tab",
@@ -89,6 +89,11 @@
 		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
 	},
 	{
+		"key": "ctrl+l",
+		"command": "acceptSelectedSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
 		"key": "ctrl+j",
 		"command": "showNextParameterHint",
 		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
@@ -109,47 +114,35 @@
 		"when": "inFileBrowser"
 	},
 	{
-		"key": "ctrl+shift+k",
-		"command": "editor.action.insertCursorAbove",
-		"when": "editorTextFocus"
+		"key": "ctrl+shift+m",
+		"command": "-workbench.actions.view.problems"
 	},
 	{
-		"key": "ctrl+shift+up",
-		"command": "-editor.action.insertCursorAbove",
-		"when": "editorTextFocus"
+		"key": "ctrl+shift+m",
+		"command": "workbench.action.toggleMaximizedPanel"
 	},
 	{
-		"key": "shift+alt+up",
-		"command": "-editor.action.insertCursorAbove",
-		"when": "editorTextFocus"
+		"key": "ctrl+e",
+		"command": "-workbench.action.quickOpen"
+	},
+	{
+		"key": "alt+down",
+		"command": "-workbench.action.terminal.focusNextPane",
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "alt+right",
+		"command": "-workbench.action.terminal.focusNextPane",
+		"when": "terminalFocus && terminalProcessSupported"
 	},
 	{
 		"key": "ctrl+shift+j",
-		"command": "editor.action.insertCursorBelow",
-		"when": "editorTextFocus"
+		"command": "-workbench.action.search.toggleQueryDetails",
+		"when": "inSearchEditor || searchViewletFocus"
 	},
 	{
-		"key": "ctrl+shift+down",
-		"command": "-editor.action.insertCursorBelow",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "shift+alt+down",
-		"command": "-editor.action.insertCursorBelow",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+shift+d",
-		"command": "editor.action.addSelectionToNextFindMatch",
-		"when": "editorFocus"
-	},
-	{
-		"key": "ctrl+d",
-		"command": "-editor.action.addSelectionToNextFindMatch",
-		"when": "editorFocus"
-	},
-	{
-		"key": "ctrl+shift+d",
-		"command": "-workbench.view.debug"
+		"key": "ctrl+w",
+		"command": "-extension.vim_ctrl+w",
+		"when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
 	}
 ]
