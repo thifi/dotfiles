@@ -1,0 +1,22 @@
+default_flags = "g"
+
+[[verbs]]
+execution = ":line_down"
+key = "ctrl-j"
+
+[[verbs]]
+execution = ":line_up"
+key = "ctrl-k"
+
+[[verbs]]
+execution = "code {file}"
+invocation = "code"
+shortcut = "c"
+
+[[verbs]]
+execution = "emacsclient -n -c {file}"
+invocation = "emacs"
+shortcut = "e"
+
+[special-paths]
+"/**/node_modules" = "no-enter"

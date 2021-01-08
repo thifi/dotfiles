@@ -40,6 +40,7 @@
     # CLI
     autorandr
     bat
+    broot
     ccrypt
     fasd
     fd
@@ -131,6 +132,20 @@
     functions = {
       fish_greeting = "fish_logo";
       gitignore = "curl -sL https://www.gitignore.io/api/$argv";
+
+      # broot fish wrapper
+      # https://github.com/Canop/broot/issues/31
+      br = ''
+          set f (mktemp)
+          broot --outcmd $f $argv
+          if test $status -ne 0
+              rm -f "$f"
+              return "$code"
+          end
+          set d (cat "$f")
+          rm -f "$f"
+          eval "$d"
+      '';
     };
   };
 
@@ -162,38 +177,5 @@
   programs.fzf = {
     enable = true;
     enableFishIntegration = true;
-  };
-
-  programs.broot = {
-    enable = true;
-    enableFishIntegration = true;
-    verbs = [
-      {
-        invocation = "p";
-        execution = ":parent";
-      }
-      {
-        invocation = "edit";
-        shortcut = "e";
-        execution = "$EDITOR {file}";
-      }
-      {
-        invocation = "create {subpath}";
-        execution = "$EDITOR {directory}/{subpath}";
-      }
-      {
-        invocation = "view";
-        shortcut = "v";
-        execution = "less {file}";
-      }
-      {
-        key = "ctrl-j";
-        execution = ":line_down";
-      }
-      {
-        key = "ctrl-k";
-        execution = ":line_up";
-      }
-    ];
   };
 }
