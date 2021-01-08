@@ -9,4 +9,4 @@ common:
 	stow -t ~ -d common/ home-manager
 	stow -t ~ -d common/ vscode
 	stow -t ~ -d common/ tmux
-	stow -t ~ -d common/ spacemacsf
+	stow -t ~ -d common/ spacemacs
