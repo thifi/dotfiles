@@ -30,6 +30,9 @@
     #       npm install -g doesn't work well.
     #
     cmake
+    dhall
+    dhall-json
+    dhall-lsp-server
     go
     rustup
     yarn
