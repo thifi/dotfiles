@@ -5,7 +5,7 @@ ARG tasks=/tmp/tasks
 
 # --------------
 
-RUN pacman -Syu --noconfirm
+RUN pacman -Sy
 
 # --------------
 
@@ -20,3 +20,13 @@ ENV USER=$user
 USER $user
 
 RUN touch /home/${user}/.bash_profile
+
+# --------------
+
+WORKDIR $tasks
+
+# COPY tasks/00-prerequisites.sh .
+RUN sudo pacman -S stow --noconfirm
+
+COPY ./tasks/01-nix.sh .
+RUN ./01-nix.sh
