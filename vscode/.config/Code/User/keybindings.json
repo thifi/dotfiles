@@ -1,161 +1,160 @@
-// Place your key bindings in this file to override the defaults
 [
-	{
-		"key": "space",
-		"command": "vspacecode.space",
-		"when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
-	},
-	{
-		"key": "tab",
-		"command": "extension.vim_tab",
-		"when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
-	},
-	{
-		"key": "tab",
-		"command": "-extension.vim_tab",
-		"when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-	},
-	{
-		"key": "x",
-		"command": "magit.discard-at-point",
-		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-	},
-	{
-		"key": "k",
-		"command": "-magit.discard-at-point"
-	},
-	{
-		"key": "-",
-		"command": "magit.reverse-at-point",
-		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-	},
-	{
-		"key": "v",
-		"command": "-magit.reverse-at-point"
-	},
-	{
-		"key": "shift+-",
-		"command": "magit.reverting",
-		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-	},
-	{
-		"key": "shift+v",
-		"command": "-magit.reverting"
-	},
-	{
-		"key": "shift+o",
-		"command": "magit.resetting",
-		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-	},
-	{
-		"key": "shift+x",
-		"command": "-magit.resetting"
-	},
-	{
-		"key": "x",
-		"command": "-magit.reset-mixed"
-	},
-	{
-		"key": "ctrl+u x",
-		"command": "-magit.reset-hard"
-	},
-	{
-		"key": "y",
-		"command": "-magit.show-refs"
-	},
-	{
-		"key": "y",
-		"command": "vspacecode.showMagitRefMenu",
-		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode == 'Normal'"
-	},
-	{
-		"key": "ctrl+j",
-		"command": "workbench.action.quickOpenSelectNext",
-		"when": "inQuickOpen"
-	},
-	{
-		"key": "ctrl+k",
-		"command": "workbench.action.quickOpenSelectPrevious",
-		"when": "inQuickOpen"
-	},
-	{
-		"key": "ctrl+j",
-		"command": "selectNextSuggestion",
-		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-	},
-	{
-		"key": "ctrl+k",
-		"command": "selectPrevSuggestion",
-		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-	},
-	{
-		"key": "ctrl+l",
-		"command": "acceptSelectedSuggestion",
-		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-	},
-	{
-		"key": "ctrl+j",
-		"command": "showNextParameterHint",
-		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-	},
-	{
-		"key": "ctrl+k",
-		"command": "showPrevParameterHint",
-		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-	},
-	{
-		"key": "ctrl+h",
-		"command": "file-browser.stepOut",
-		"when": "inFileBrowser"
-	},
-	{
-		"key": "ctrl+l",
-		"command": "file-browser.stepIn",
-		"when": "inFileBrowser"
-	},
-	{
-		"key": "ctrl+shift+m",
-		"command": "-workbench.actions.view.problems"
-	},
-	{
-		"key": "ctrl+shift+m",
-		"command": "workbench.action.toggleMaximizedPanel"
-	},
-	{
-		"key": "ctrl+e",
-		"command": "-workbench.action.quickOpen"
-	},
-	{
-		"key": "alt+down",
-		"command": "-workbench.action.terminal.focusNextPane",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	{
-		"key": "alt+right",
-		"command": "-workbench.action.terminal.focusNextPane",
-		"when": "terminalFocus && terminalProcessSupported"
-	},
-	{
-		"key": "ctrl+shift+j",
-		"command": "-workbench.action.search.toggleQueryDetails",
-		"when": "inSearchEditor || searchViewletFocus"
-	},
-	{
-        "key": "ctrl+shift+j",
-        "command": "workbench.action.terminal.focusNext",
-	},
-	{
-		"key": "ctrl+w",
-		"command": "-extension.vim_ctrl+w",
-		"when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
-	},
-	{
-		"key": "ctrl+j",
-		"command": "-workbench.action.togglePanel"
-	},
-	{
-		"key": "ctrl+k",
-		"command": "",
-		"when": "terminalFocus && terminalProcessSupported"
-	}
+  {
+    "command": "vspacecode.space",
+    "key": "space",
+    "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
+  },
+  {
+    "command": "extension.vim_tab",
+    "key": "tab",
+    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
+  },
+  {
+    "command": "-extension.vim_tab",
+    "key": "tab",
+    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "command": "magit.discard-at-point",
+    "key": "x",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "command": "-magit.discard-at-point",
+    "key": "k"
+  },
+  {
+    "command": "magit.reverse-at-point",
+    "key": "-",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "command": "-magit.reverse-at-point",
+    "key": "v"
+  },
+  {
+    "command": "magit.reverting",
+    "key": "shift+-",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "command": "-magit.reverting",
+    "key": "shift+v"
+  },
+  {
+    "command": "magit.resetting",
+    "key": "shift+o",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "command": "-magit.resetting",
+    "key": "shift+x"
+  },
+  {
+    "command": "-magit.reset-mixed",
+    "key": "x"
+  },
+  {
+    "command": "-magit.reset-hard",
+    "key": "ctrl+u x"
+  },
+  {
+    "command": "-magit.show-refs",
+    "key": "y"
+  },
+  {
+    "command": "vspacecode.showMagitRefMenu",
+    "key": "y",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode == 'Normal'"
+  },
+  {
+    "command": "workbench.action.quickOpenSelectNext",
+    "key": "ctrl+j",
+    "when": "inQuickOpen"
+  },
+  {
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "key": "ctrl+k",
+    "when": "inQuickOpen"
+  },
+  {
+    "command": "selectNextSuggestion",
+    "key": "ctrl+j",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "command": "selectPrevSuggestion",
+    "key": "ctrl+k",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "command": "acceptSelectedSuggestion",
+    "key": "ctrl+l",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "command": "showNextParameterHint",
+    "key": "ctrl+j",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "command": "showPrevParameterHint",
+    "key": "ctrl+k",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "command": "file-browser.stepOut",
+    "key": "ctrl+h",
+    "when": "inFileBrowser"
+  },
+  {
+    "command": "file-browser.stepIn",
+    "key": "ctrl+l",
+    "when": "inFileBrowser"
+  },
+  {
+    "command": "-workbench.action.togglePanel",
+    "key": "ctrl+j"
+  },
+  {
+    "command": "",
+    "key": "ctrl+k",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "command": "-workbench.action.quickOpen",
+    "key": "ctrl+e"
+  },
+  {
+    "command": "-extension.vim_ctrl+w",
+    "key": "ctrl+w",
+    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+  },
+  {
+    "command": "-workbench.action.terminal.focusNextPane",
+    "key": "alt+down",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "command": "-workbench.action.terminal.focusNextPane",
+    "key": "alt+right",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "command": "-workbench.actions.view.problems",
+    "key": "ctrl+shift+m"
+  },
+  {
+    "command": "workbench.action.toggleMaximizedPanel",
+    "key": "ctrl+shift+m"
+  },
+  {
+    "command": "-workbench.action.search.toggleQueryDetails",
+    "key": "ctrl+shift+j",
+    "when": "inSearchEditor || searchViewletFocus"
+  },
+  {
+    "command": "workbench.action.terminal.focusNext",
+    "key": "ctrl+shift+j"
+  }
 ]

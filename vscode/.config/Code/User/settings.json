@@ -1,110 +1,121 @@
 {
-    "vim.easymotion": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": false,
-    "vim.insertModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "f", "d"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        },
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<space>"
-            ],
-            "commands": [
-                "vspacecode.space"
-            ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "command": "whichkey.triggerKey",
-                    "args": "m"
-                }
-            ]
-        },
-        {
-            "before": [
-                "g", "r", "m"
-            ],
-            "commands": [
-                "editor.action.selectHighlights"
-            ]
-        },
-        {
-            "before": [
-                "g", "r", "j"
-            ],
-            "commands": [
-                "editor.action.insertCursorBelow"
-            ]
-        },
-        {
-            "before": [
-                "g", "r", "k"
-            ],
-            "commands": [
-                "editor.action.insertCursorAbove"
-            ]
-        },
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<space>"
-            ],
-            "commands": [
-                "vspacecode.space"
-            ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "command": "whichkey.triggerKey",
-                    "args": "m"
-                }
-            ]
-        },
-        {
-            "before": [
-                "g", "r", "a"
-            ],
-            "commands": [
-                "editor.action.insertCursorAtEndOfEachLineSelected"
-            ]
-        },
-    ],
-    "files.associations": {
-        "**/.i3/config": "i3",
-        "**/i3/config": "i3",
-    },
-    "window.zoomLevel": 1,
-    "editor.fontFamily": "Jetbrains Mono",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 18,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "python.languageServer": "Pylance",
-    "[markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontFamily": "Jetbrains Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 18,
+  "editor.renderWhitespace": "trailing",
+  "files.associations": {
+    "**/.i3/config": "i3",
+    "**/i3/config": "i3"
+  },
+  "go.formatTool": "goimports",
+  "python.languageServer": "Pylance",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vim.easymotion": true,
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "after": [
+        "<Esc>"
+      ],
+      "before": [
+        "f",
+        "d"
+      ]
     }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "g",
+        "r",
+        "m"
+      ],
+      "commands": [
+        "editor.action.selectHighlights"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r",
+        "j"
+      ],
+      "commands": [
+        "editor.action.insertCursorBelow"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r",
+        "k"
+      ],
+      "commands": [
+        "editor.action.insertCursorAbove"
+      ]
+    },
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "vspacecode.space"
+      ]
+    },
+    {
+      "before": [
+        ","
+      ],
+      "commands": [
+        "vspacecode.space",
+        {
+          "args": "m",
+          "command": "whichkey.triggerKey"
+        }
+      ]
+    }
+  ],
+  "vim.useCtrlKeys": false,
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "g",
+        "r",
+        "a"
+      ],
+      "commands": [
+        "editor.action.insertCursorAtEndOfEachLineSelected"
+      ]
+    },
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "vspacecode.space"
+      ]
+    },
+    {
+      "before": [
+        ","
+      ],
+      "commands": [
+        "vspacecode.space",
+        {
+          "args": "m",
+          "command": "whichkey.triggerKey"
+        }
+      ]
+    }
+  ],
+  "window.zoomLevel": 1
 }
