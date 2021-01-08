@@ -1,6 +1,7 @@
 {
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": false,
     "vim.insertModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -9,7 +10,7 @@
             "after": [
                 "<Esc>"
             ]
-        }
+        },
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -31,7 +32,31 @@
                     "args": "m"
                 }
             ]
-        }
+        },
+        {
+            "before": [
+                "g", "r", "m"
+            ],
+            "commands": [
+                "editor.action.selectHighlights"
+            ]
+        },
+        {
+            "before": [
+                "g", "r", "j"
+            ],
+            "commands": [
+                "editor.action.insertCursorBelow"
+            ]
+        },
+        {
+            "before": [
+                "g", "r", "k"
+            ],
+            "commands": [
+                "editor.action.insertCursorAbove"
+            ]
+        },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
@@ -53,7 +78,15 @@
                     "args": "m"
                 }
             ]
-        }
+        },
+        {
+            "before": [
+                "g", "r", "a"
+            ],
+            "commands": [
+                "editor.action.insertCursorAtEndOfEachLineSelected"
+            ]
+        },
     ],
     "files.associations": {
         "**/.i3/config": "i3",
@@ -67,5 +100,11 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "python.languageServer": "Pylance"
+    "python.languageServer": "Pylance",
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
