@@ -156,5 +156,40 @@
   {
     "command": "workbench.action.terminal.focusNext",
     "key": "ctrl+shift+j"
+  },
+  {
+    "command": "-workbench.action.files.openFile",
+    "key": "ctrl+o"
+  },
+  {
+    "command": "-workbench.action.files.openLocalFile",
+    "key": "ctrl+o"
+  },
+  {
+    "command": "extension.vim_ctrl+o",
+    "key": "ctrl+o",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "command": "-workbench.action.openRecent",
+    "key": "ctrl+r"
+  },
+  {
+    "command": "extension.vim_ctrl+r",
+    "key": "ctrl+r",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "command": "-workbench.action.navigateBack",
+    "key": "ctrl+alt+-"
+  },
+  {
+    "command": "-workbench.action.terminal.focusPreviousPane",
+    "key": "alt+left",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "workbench.action.navigateBack",
+    "key": "alt+left"
   }
 ]

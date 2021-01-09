@@ -117,5 +117,19 @@
       ]
     }
   ],
+  "vspacecode.bindingOverrides": [
+    {
+      "command": "workbench.action.quickOpen",
+      "keys": " ",
+      "name": "Quick Open",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.showCommands",
+      "keys": ":",
+      "name": "Show Commands",
+      "type": "command"
+    }
+  ],
   "window.zoomLevel": 1
 }
