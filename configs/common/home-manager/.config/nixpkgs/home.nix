@@ -30,9 +30,9 @@
     #       npm install -g doesn't work well.
     #
     cmake
-    dhall
-    dhall-json
-    dhall-lsp-server
+    # dhall
+    # dhall-json
+    # dhall-lsp-server
     go
     rustup
     yarn
@@ -63,7 +63,7 @@
     enable = true;
 
     # Auto-exec tmux when launching fish
-    shellInit = "if test $TERM != \"screen-256color\"; exec tmux; end;";
+    # shellInit = "if test $TERM != \"screen-256color\"; exec tmux; end;";
 
     plugins = [
       {
