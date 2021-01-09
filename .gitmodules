@@ -1,6 +1,3 @@
-[submodule "tmux/.tmux/plugins/tpm"]
-	path = tmux/.tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
 [submodule "scripts/color-scripts"]
 	path = scripts/color-scripts
 	url = git@github.com:ItayGarin/Color-Scripts.git
