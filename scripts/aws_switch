@@ -1,0 +1,2 @@
+#!/bin/bash
+cat $HOME/.aws/accounts.txt | grep $1 | awk '{ print $2 }' | xargs -I{} echo "$HOME/.aws/{}" | xargs -I{} cp {} $HOME/.aws/credentials

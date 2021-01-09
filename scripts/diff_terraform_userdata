@@ -1,0 +1,4 @@
+#!/bin/bash
+cat $1 | cut -d\" -f2 | base64 -d - > /tmp/terraform_before.txt
+cat $1 | cut -d\" -f4 | base64 -d - > /tmp/terraform_after.txt
+meld /tmp/terraform_before.txt /tmp/terraform_after.txt
