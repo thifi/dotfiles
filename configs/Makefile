@@ -2,6 +2,10 @@
 asus-g14: common
 	stow -t ~ -d machines/asus-g14/ regolith
 
+.PHONY: dell-g5
+dell-g5: common
+	stow -t ~ -d machines/dell-g5/ i3
+
 .PHONY: common
 common: 
 	stow -t ~ -d common/ broot
