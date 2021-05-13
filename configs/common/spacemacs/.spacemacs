@@ -65,7 +65,7 @@ This function should only modify configuration layer settings."
              python-lsp-server 'pyright
              python-pipenv-activate nil
              python-format-on-save nil
-
+             python-shell-interpreter "/usr/bin/python3"
              lsp-pyright-python-executable-cmd "/usr/bin/python3"
              )
 
