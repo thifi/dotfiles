@@ -11,6 +11,7 @@
   home.stateVersion = "21.03";
 
   home.sessionVariables = { EDITOR = "vim"; };
+  home.sessionPath = [ "/home/itayg/go/bin" ];
 
   home.packages = with pkgs; [
 
