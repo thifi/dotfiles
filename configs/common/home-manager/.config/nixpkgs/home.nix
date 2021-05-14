@@ -8,7 +8,7 @@
 
   home.username = "itayg";
   home.homeDirectory = "/home/itayg";
-  home.stateVersion = "21.03";
+  home.stateVersion = "21.05";
 
   home.sessionVariables = { EDITOR = "vim"; };
   home.sessionPath = [ "/home/itayg/go/bin" ];
@@ -19,7 +19,6 @@
     arandr
     emacs
     meld
-    qbittorrent
 
     # Cloud
     awscli
@@ -31,9 +30,9 @@
     #       npm install -g doesn't work well.
     #
     cmake
-    # dhall
-    # dhall-json
-    # dhall-lsp-server
+    dhall
+    dhall-json
+    dhall-lsp-server
     go
     rustup
     yarn
