@@ -133,9 +133,10 @@
 
     shellAliases = {
        bd = "bg && disown";
-       ip = "~/dotfiles/scripts/color-ip";
+       ip = "~/scripts/color-ip";
        oip = "/usr/sbin/ip";
        at = "alacritty-themes";
+       cm = "chezmoi";
        };
 
     functions = {
