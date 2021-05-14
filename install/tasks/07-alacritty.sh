@@ -14,6 +14,3 @@ wget https://download.jetbrains.com/fonts/JetBrainsMono-2.221.zip
 unzip JetBrainsMono-2.221.zip
 mkdir -p ~/.local/share/fonts/
 mv fonts/ttf/JetBrainsMono-*.ttf ~/.local/share/fonts/
-
-cd ~/dotfiles
-stow alacritty

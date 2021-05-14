@@ -2,4 +2,5 @@
 
 set -e
 
-sudo apt-get install -y stow
+sudo apt-get install -y stow curl make
+
