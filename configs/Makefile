@@ -8,9 +8,9 @@ dell-g5: common
 
 .PHONY: common
 common: 
-	stow -t ~ -d common/ broot
-	stow -t ~ -d common/ alacritty
-	stow -t ~ -d common/ home-manager
-	stow -t ~ -d common/ vscode
-	stow -t ~ -d common/ tmux
-	stow -t ~ -d common/ spacemacs
+	stow -D -t ~ -d common/ broot
+	stow -D -t ~ -d common/ alacritty
+	stow -D -t ~ -d common/ home-manager
+	stow -D -t ~ -d common/ vscode
+	stow -D -t ~ -d common/ tmux
+	stow -D -t ~ -d common/ spacemacs
