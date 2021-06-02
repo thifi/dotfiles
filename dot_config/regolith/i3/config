@@ -85,8 +85,8 @@ set_from_resource $ws8_key  i3-wm.workspace.08.key 8
 set_from_resource $ws9_key  i3-wm.workspace.09.key 9
 set_from_resource $ws10_key i3-wm.workspace.10.key 0
 
-set $primary-output HDMI-A-0
-set $secondary-output eDP
+set $primary-output DP-1-2-1-8
+set $secondary-output DP-1-2-1-1
 
 workspace "1" output $primary-output
 workspace "2" output $primary-output
@@ -661,4 +661,4 @@ exec gsettings set org.gnome.desktop.input-sources xkb-options "['caps:ctrl_modi
 exec echo "Regolith" > /tmp/theme.state
 bindsym $mod+$super+l exec ~/dotfiles/scripts/regolith-pop-toggle-theme.sh
 
-exec_always ~/dotfiles/xrandr/.screenlayout/amishav-g14.sh
+exec_always ~/dotfiles/xrandr/.screenlayout/wework.sh
