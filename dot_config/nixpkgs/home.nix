@@ -23,6 +23,7 @@
     # Cloud
     awscli
     google-cloud-sdk
+    terraform
 
     # Languages
     #
