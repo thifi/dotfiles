@@ -11,7 +11,8 @@
   home.stateVersion = "21.05";
 
   home.sessionVariables = { EDITOR = "vim"; };
-  home.sessionPath = [ "/home/itayg/go/bin" ];
+  home.sessionPath =
+    [ "/home/itayg/go/bin" "/home/itayg/scripts" "/usr/share/code" ];
 
   home.packages = with pkgs; [
 
@@ -23,7 +24,6 @@
     # Cloud
     awscli
     google-cloud-sdk
-    terraform
 
     # Languages
     #
@@ -100,7 +100,7 @@
           owner = "oh-my-fish";
           repo = "plugin-foreign-env";
           rev = "dddd9213272a0ab848d474d0cbde12ad034e65bc";
-          sha256 = "00xqlyl3lffc5l0viin1nyp819wf81fncqyz87jx8ljjdhilmgbs"; 
+          sha256 = "00xqlyl3lffc5l0viin1nyp819wf81fncqyz87jx8ljjdhilmgbs";
         };
       }
       {
@@ -133,12 +133,12 @@
     ];
 
     shellAliases = {
-       bd = "bg && disown";
-       ip = "~/scripts/color-ip";
-       oip = "/usr/sbin/ip";
-       at = "alacritty-themes";
-       cm = "chezmoi";
-       };
+      bd = "bg && disown";
+      ip = "~/scripts/color-ip";
+      oip = "/usr/sbin/ip";
+      at = "alacritty-themes";
+      cm = "chezmoi";
+    };
 
     functions = {
       fish_greeting = "fish_logo";
@@ -147,15 +147,15 @@
       # broot fish wrapper
       # https://github.com/Canop/broot/issues/31
       br = ''
-          set f (mktemp)
-          broot --outcmd $f $argv
-          if test $status -ne 0
-              rm -f "$f"
-              return "$code"
-          end
-          set d (cat "$f")
-          rm -f "$f"
-          eval "$d"
+        set f (mktemp)
+        broot --outcmd $f $argv
+        if test $status -ne 0
+            rm -f "$f"
+            return "$code"
+        end
+        set d (cat "$f")
+        rm -f "$f"
+        eval "$d"
       '';
     };
   };
